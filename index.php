@@ -51,7 +51,7 @@ include "version.php";
   } else {
    echo "Hotspot";
   }
-  ?>:</small>  <?php echo getCallsign($mmdvmconfigs) ?></h1>
+  ?>:</small>  <a target="_blank" href="https://www.qrz.com/db/<?php echo getCallsign($mmdvmconfigs) ?>"><?php echo getCallsign($mmdvmconfigs) ?></a></h1>
   <h4>MMDVMHost by G4KLX Version: <?php echo getMMDVMHostVersion() ?><br>Firmware: <?php echo getFirmwareVersion() ?>
   <?php
   if (strlen(getDMRNetwork()) > 0 ) {
@@ -77,7 +77,7 @@ include "version.php";
 
   if ($logourl !== "") {
 ?>
-<div id="Logo" style="position:absolute;top:-43px;right:10px;"><img src="<?php echo $logourl ?>" width="250px" style="width:250px; border-radius:10px;box-shadow:2px 2px 2px #808080; padding:1px;background:#FFFFFF;border:1px solid #808080;" border="0" hspace="10" vspace="10" align="absmiddle"></div>
+<div id="Logo" style="position:absolute;top:-43px;right:10px;"><a target="_blank" href="https://brandmeister.network/?page=hotspot&id=<?php echo getConfigItem("DMR", "Id", $mmdvmconfigs) ?>"><img src="<?php echo $logourl ?>" width="250px" style="width:250px; border-radius:10px;box-shadow:2px 2px 2px #808080; padding:1px;background:#FFFFFF;border:1px solid #808080;" border="0" hspace="10" vspace="10" align="absmiddle"></a></div>
 <?php
   }
 ?>
